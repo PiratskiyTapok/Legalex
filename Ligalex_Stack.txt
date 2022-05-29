@@ -1,0 +1,21 @@
+Front:
+    - HTML
+    - CSS => Sass
+    - JavaScript => React(поведение + внешний вид) + Redux
+    - AJAX => Fetch, Axios*
+
+Back:
+    - JS => TS
+    - C#
+    - ASP.NET MVC => ASP.NET Core
+    - EF
+    - MSSQL
+    
+
+For service:
+    - Gulp
+    - Postman
+    - Docker
+    - CI
+
+https://www.marquiz.ru/
