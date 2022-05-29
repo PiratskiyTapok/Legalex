@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace Ligalex.Middleware.Extension
+namespace Legalex.Middleware.Extension
 {
     public static class ErrorExtension
     {

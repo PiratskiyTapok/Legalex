@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-namespace Ligalex.Middleware
+namespace Legalex.Middleware
 {
     public class ErrorMiddleware
     {
