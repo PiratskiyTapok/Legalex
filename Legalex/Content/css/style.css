@@ -884,6 +884,7 @@ header:before {
 }
 
 .control {
+    position: relative;
     border: 1px solid #AF9553;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -897,6 +898,23 @@ header:before {
     letter-spacing: 0.025em;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.control:hover::after {
+    right: -4px;
+}
+
+.control::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 100%;
+    background-image: url('../img/arrow.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 0.2s linear;
 }
 
 .control.control-filled {
