@@ -835,11 +835,12 @@ header:before {
 }
 
 .hero__content-main {
-    margin-left: 120px;
-    margin-top: 182px;
-    width: auto;
+    /* margin-left: 120px;
+    margin-top: 182px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
+    width: 50%;
+    height: 100%;
     gap: 24px;
 }
 
@@ -923,20 +924,32 @@ header:before {
 
 .hero__content-image {
     overflow: hidden;
-    margin-right: 120px;
-    align-self: flex-end;
+    width: 50%;
 }
 
 .hero__content-image img {
     object-fit: cover;
-    max-width: 100%;
+    margin: auto;
     display: block;
 }
 
 
 /*AdaptiveContent*/
 
-@media(max-width: 1159.98px) {
+@media(max-width: 1199.98px) {
+    .hero__content-image {
+        display: none;
+    }
+    .hero__content {
+        padding: 80px 0 80px 0;
+    }
+    .hero__content-main {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1199.98px) {
     .hero {
         height: 480px;
         padding-top: 140px;
