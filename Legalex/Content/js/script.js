@@ -1,4 +1,37 @@
 window.onload = function() {
+    const swiper = new Swiper('.swiper', {
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next'
+        },
+        spaceBetween: 20,
+        loop: true,
+        watchOverflow: true,
+        loopedSlides: 0,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                centeredSlides: true
+            },
+            860: {
+                spaceBetween: 32,
+                slidesPerView: 2,
+                centeredSlides: false
+            },
+            1300: {
+                centeredSlides: false,
+                slidesPerView: 3,
+                spaceBetween: 48
+            },
+            1860: {
+                slidesPerView: 4,
+                spaceBetween: 56
+            },
+            2400: {
+                slidesPerView: 5
+            }
+        }
+    });
     const body = document.querySelector('body');
     const burger = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__nav');
@@ -11,6 +44,12 @@ window.onload = function() {
     setSeparatorSize(sectionTopLeftSeparator, sectionBottomLeftSeparator, sectionTopRightSeparator, sectionBottomRightSeparator);
     window.onresize = function(event) {
         setSeparatorSize(sectionTopLeftSeparator, sectionBottomLeftSeparator, sectionTopRightSeparator, sectionBottomRightSeparator);
+
+        if (window.screen.width > 768) {
+            burger.classList.remove('active');
+            menu.classList.remove('active');
+            body.classList.remove('scroll_lock');
+        }
     }
 }
 
@@ -37,13 +76,5 @@ function setBurgerState(body, burger, menu) {
         burger.classList.toggle('active');
         menu.classList.toggle('active');
         body.classList.toggle('scroll_lock');
-    }
-
-    window.onresize = function(event) {
-        if (window.screen.width > 768) {
-            burger.classList.remove('active');
-            menu.classList.remove('active');
-            body.classList.remove('scroll_lock');
-        }
     }
 }

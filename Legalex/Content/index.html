@@ -54,8 +54,11 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
 
+    <script defer src="libs/Swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="libs/Swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -132,7 +135,7 @@
             </div>
         </div>
     </section>
-    <section class="quote shadow-on-tablet">
+    <section class="quote">
         <div class="content-wrapper">
             <div class="quote__content">
                 <div class="quote__content-image">
@@ -147,9 +150,42 @@
         <div class="separator top-left__separator"></div>
     </section>
     <section class="consultation">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="consultation-package">
+                        <div class="consultation__text">
+                            <h1 class="text__caption">Юридическая консультация</h1>
+                            <p class="text__subcaption">Сопровождение хозяйственной деятельности, юридическая помощь, разрешение споров.
+                            </p>
+                        </div>
+                        <div class="controls">
+                            <a href="#" class="control control-filled">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="consultation-package"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="consultation-package"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="consultation-package"></div>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
         <div class="content-wrapper">
             <div class="consultation__content">
-                <div class="content__text">
+                <div class="footer__text">
                     <h1 class="text__caption">Почему мы?</h1>
                     <p class="text__subcaption">Юридическая компания <b>«ЛигаЛекс»</b> специализируется на оказании юридической помощи в регистрации юридических лиц и индивидуальных предпринимателей, а также сопровождении их хозяйственной деятельности, разрешении споров, возникающих
                         в ходе хозяйственной деятельности иных правовых вопросах.
@@ -158,6 +194,7 @@
             </div>
         </div>
     </section>
+
     <section class="information">
         <div class="content-wrapper">
             <div class="information__content-main">
@@ -171,6 +208,7 @@
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="content-wrapper">
             <div class="footer__content">
