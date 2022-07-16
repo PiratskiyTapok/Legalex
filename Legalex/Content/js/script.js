@@ -35,15 +35,15 @@ window.onload = function() {
     const body = document.querySelector('body');
     const burger = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__nav');
-    const sectionTopLeftSeparator = document.querySelector('.top-left__separator');
-    const sectionBottomLeftSeparator = document.querySelector('.bottom-left__separator');
-    const sectionTopRightSeparator = document.querySelector('.top-right__separator');
-    const sectionBottomRightSeparator = document.querySelector('.bottom-right__separator');
+    const sectionTopLeftSeparators = document.querySelectorAll('.top-left__separator');
+    const sectionBottomLeftSeparators = document.querySelectorAll('.bottom-left__separator');
+    const sectionTopRightSeparators = document.querySelectorAll('.top-right__separator');
+    const sectionBottomRightSeparators = document.querySelectorAll('.bottom-right__separator');
 
     setBurgerState(body, burger, menu);
-    setSeparatorSize(sectionTopLeftSeparator, sectionBottomLeftSeparator, sectionTopRightSeparator, sectionBottomRightSeparator);
+    setSeparatorSize(sectionTopLeftSeparators, sectionBottomLeftSeparators, sectionTopRightSeparators, sectionBottomRightSeparators);
     window.onresize = function(event) {
-        setSeparatorSize(sectionTopLeftSeparator, sectionBottomLeftSeparator, sectionTopRightSeparator, sectionBottomRightSeparator);
+        setSeparatorSize(sectionTopLeftSeparators, sectionBottomLeftSeparators, sectionTopRightSeparators, sectionBottomRightSeparators);
 
         if (window.screen.width > 768) {
             burger.classList.remove('active');
@@ -53,21 +53,29 @@ window.onload = function() {
     }
 }
 
-function setSeparatorSize(sectionTopLeftSeparator, sectionBottomLeftSeparator, sectionTopRightSeparator, sectionBottomRightSeparator) {
-    if (sectionTopLeftSeparator != null) {
-        sectionTopLeftSeparator.style.borderLeft = document.body.clientWidth + "px solid #E9E3E7";
+function setSeparatorSize(sectionTopLeftSeparators, sectionBottomLeftSeparators, sectionTopRightSeparators, sectionBottomRightSeparators) {
+    if (sectionTopLeftSeparators != null) {
+        sectionTopLeftSeparators.forEach(element => {
+            element.style.borderLeft = document.body.clientWidth + "px solid #E9E3E7";
+        });
     }
 
-    if (sectionBottomLeftSeparator != null) {
-        sectionBottomLeftSeparator.style.borderLeft = document.body.clientWidth + "px solid #E9E3E7";
+    if (sectionBottomLeftSeparators != null) {
+        sectionBottomLeftSeparators.forEach(element => {
+            element.style.borderLeft = document.body.clientWidth + "px solid #E9E3E7";
+        });
     }
 
-    if (sectionTopRightSeparator != null) {
-        sectionTopRightSeparator.style.borderRight = document.body.clientWidth + "px solid #E9E3E7";
+    if (sectionTopRightSeparators != null) {
+        sectionTopRightSeparators.forEach(element => {
+            element.style.borderRight = document.body.clientWidth + "px solid #E9E3E7";
+        });
     }
 
-    if (sectionBottomRightSeparator != null) {
-        sectionBottomRightSeparator.style.borderRight = document.body.clientWidth + "px solid #E9E3E7";
+    if (sectionBottomRightSeparators != null) {
+        sectionBottomRightSeparators.forEach(element => {
+            element.style.borderRight = document.body.clientWidth + "px solid #E9E3E7";
+        });
     }
 }
 
