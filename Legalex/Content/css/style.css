@@ -1423,8 +1423,138 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 366px;
         }
+
+        .team .content-wrapper {
+            max-width: 1600px;
+        }
+
+        .team__content {
+            background-color: #e9e3e7;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .team .footer__text {
+            margin-top: 220px;
+            height: 250px;
+        }
+
+        .team .text__caption {
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 75px;
+            text-align: center;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+
+        .team .text__subcaption {
+            font-family: 'Zen Maru Gothic';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            text-align: center;
+            text-align: center;
+            color: #000000;
+        }
+
+        .team .team__party {
+            display: flex;
+            gap: 3rem;
+            max-width: 1600px;
+            position: relative;
+            top: -150px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team__party .persone {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+            max-width: 360px;
+        }
+
+        .team__party .persone:nth-child(1) {
+            top: 60px;
+        }
+
+        .team__party .persone:nth-child(2) {
+            top: 40px;
+        }
+
+        .team__party .persone:nth-child(3) {
+            top: 20px;
+        }
+
+        .team__party .persone .persone_avatar {
+            border-radius: 50%;
+        }
+
+        .team__party .persone .persone_avatar > img {
+            width: 100%;
+        }
+
+        .team__party .persone .persone_info{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Zen Maru Gothic';
+        }
+
+        .team__party .persone .persone_info .persone_name {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 2rem;
+        }
+
+        .team__party .persone .persone_info .persone_work {
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 21px;
+        }
+
+        .team__party .persone .persone_info .persone_about {
+            padding-top: 10px;
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        @media(max-width: 1199.98px) {
+            .team__party .persone {
+                top: unset !important;
+            }
+        }
+        
+        @media (max-width: 599.98px) {
+            .team .footer__text {
+                margin-top: 300px;
+            }
+
+            .team .text__caption {
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 63px;
+            }
+
+            .team .text__subcaption {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+            }
+
+            .team__content {
+                padding: 0 2rem;
+            }
+        }
+
         /*About****************************************/
         
         .about {
