@@ -494,6 +494,10 @@
             width: 100%;
             color: #2F2A2E;
         }
+        
+        body.scroll_lock {
+            overflow: hidden;
+        }
         /*Slider****************************************/
         
         .swiper {
@@ -768,9 +772,6 @@
         }
         
         @media (max-width: 767.98px) {
-            body.scroll_lock {
-                overflow: hidden;
-            }
             .header__burger {
                 display: block;
                 width: 36px;
@@ -1537,11 +1538,11 @@
             left: 0;
             width: 100%;
         }
-
+        
         .team .content-wrapper {
             max-width: 1600px;
         }
-
+        
         .team__content {
             background-color: #e9e3e7;
             display: flex;
@@ -1552,7 +1553,7 @@
             margin-top: 220px;
             height: 250px;
         }
-
+        
         .team .text__caption {
             font-family: 'El Messiri';
             font-style: normal;
@@ -1564,7 +1565,7 @@
             text-transform: uppercase;
             color: #000000;
         }
-
+        
         .team .text__subcaption {
             font-family: 'Zen Maru Gothic';
             font-style: normal;
@@ -1575,7 +1576,7 @@
             text-align: center;
             color: #000000;
         }
-
+        
         .team .team__party {
             display: flex;
             gap: 3rem;
@@ -1585,7 +1586,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-
+        
         .team__party .persone {
             display: flex;
             flex-direction: column;
@@ -1593,53 +1594,53 @@
             position: relative;
             max-width: 360px;
         }
-
+        
         .team__party .persone:nth-child(1) {
             top: 60px;
         }
-
+        
         .team__party .persone:nth-child(2) {
             top: 40px;
         }
-
+        
         .team__party .persone:nth-child(3) {
             top: 20px;
         }
-
+        
         .team__party .persone .persone_avatar {
             border-radius: 50%;
         }
-
-        .team__party .persone .persone_avatar > img {
+        
+        .team__party .persone .persone_avatar>img {
             width: 100%;
         }
-
-        .team__party .persone .persone_info{
+        
+        .team__party .persone .persone_info {
             text-align: center;
             display: flex;
             flex-direction: column;
             font-family: 'Zen Maru Gothic';
         }
-
+        
         .team__party .persone .persone_info .persone_name {
             text-transform: uppercase;
             font-size: 20px;
             font-weight: bold;
             line-height: 2rem;
         }
-
+        
         .team__party .persone .persone_info .persone_work {
             font-weight: bold;
             font-size: 17px;
             line-height: 21px;
         }
-
+        
         .team__party .persone .persone_info .persone_about {
             padding-top: 10px;
             font-size: 16px;
             line-height: 21px;
         }
-
+        
         @media(max-width: 1199.98px) {
             .team__party .persone {
                 top: unset !important;
@@ -1650,24 +1651,20 @@
             .team .footer__text {
                 margin-top: 300px;
             }
-
             .team .text__caption {
                 font-weight: 400;
                 font-size: 40px;
                 line-height: 63px;
             }
-
             .team .text__subcaption {
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 150%;
             }
-
             .team__content {
                 padding: 0 2rem;
             }
         }
-
         /*About****************************************/
         
         .about {
@@ -1850,4 +1847,77 @@
             text-align: center;
             letter-spacing: 0.1em;
             color: #FFFFFF;
+        }
+        
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease 0s;
+        }
+        
+        .popup.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .popup.open .popup__content {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+        
+        .popup__body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            padding: 40px 20px;
+        }
+        
+        .popup__content {
+            position: relative;
+            width: 1120px;
+            opacity: 0;
+            transition: all 0.4s ease 0s;
+            transform: translate(0px, -100%);
+            background-color: #FFFFFF;
+        }
+        
+        .popup__close {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            font-size: 20px;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .popup__title {
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 75px;
+            /* identical to box height */
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+        
+        .popup__text {
+            font-family: 'Zen Maru Gothic';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            color: #5B5259;
         }

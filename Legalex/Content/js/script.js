@@ -40,6 +40,7 @@ window.onload = function() {
     const sectionTopRightSeparators = document.querySelectorAll('.top-right__separator');
     const sectionBottomRightSeparators = document.querySelectorAll('.bottom-right__separator');
 
+    setPopupState(body);
     setBurgerState(body, burger, menu);
     setSeparatorSize(sectionTopLeftSeparators, sectionBottomLeftSeparators, sectionTopRightSeparators, sectionBottomRightSeparators);
     window.onresize = function(event) {
@@ -85,4 +86,47 @@ function setBurgerState(body, burger, menu) {
         menu.classList.toggle('active');
         body.classList.toggle('scroll_lock');
     }
+}
+
+function setPopupState(body) {
+    const popupLinks = document.querySelectorAll('.popup-link');
+    const popupCloseIcon = document.querySelectorAll('.close-popup');
+
+    if (popupLinks.length > 0) {
+        popupLinks.forEach(function(popupLink) {
+            popupLink.addEventListener("click", function(event) {
+                const popupName = popupLink.getAttribute('href').replace('#', '');
+                const currentPopup = document.getElementById(popupName);
+                popupOpen(currentPopup, body);
+                event.preventDefault();
+            })
+        });
+    }
+
+    if (popupCloseIcon.length > 0) {
+        popupCloseIcon.forEach(function(closeIcon) {
+            closeIcon.addEventListener("click", function(event) {
+                popupClose(event.target.closest('.popup'), body);
+                event.preventDefault();
+            })
+        })
+    }
+}
+
+function popupOpen(currentPopup, body) {
+    if (currentPopup) {
+        body.classList.add('scroll_lock');
+    }
+
+    currentPopup.classList.add('open');
+    currentPopup.addEventListener("click", function(event) {
+        if (!event.target.closest('.popup__content')) {
+            popupClose(event.target.closest('.popup'), body);
+        }
+    })
+}
+
+function popupClose(currentPopup, body) {
+    currentPopup.classList.remove('open');
+    body.classList.remove('scroll_lock');
 }
