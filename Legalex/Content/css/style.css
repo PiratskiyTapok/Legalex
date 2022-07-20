@@ -947,12 +947,21 @@
             text-decoration: none;
         }
         
+        .control:active,
+        .control:focus {
+            outline: none;
+        }
+        
+        .control::-moz-focus-inner {
+            border: 0;
+        }
+        
+        .control.control-bordered:hover {
+            background-color: #AF9553;
+        }
+        
         .with-arrow.control:hover::after {
             right: -4px;
-        }
-
-        .with-arrow.control:hover {
-            background-color: #AF9553;;
         }
         
         .with-arrow.control::after {
@@ -968,8 +977,8 @@
             transition: all 0.2s linear;
         }
         
-        .control.control-filled {
-            background-color: #AF9553;
+        .control.control-bordered {
+            background-color: #201C1D;
         }
         
         .hero__content-image {
@@ -1758,6 +1767,11 @@
             height: 424px;
             border: 28px solid #2F2A2E;
         }
+        
+        .content__map .map iframe {
+            width: 100%;
+            height: 100%;
+        }
         /*Documents****************************************/
         
         .documents {
@@ -1924,4 +1938,44 @@
             text-align: center;
             letter-spacing: 0.1em;
             color: #5B5259;
+        }
+
+
+        #request-popup .popup__content {
+            width: 500px;
+        }
+
+        .form_request {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .form_request > label {
+
+        }
+
+        .form_request > input {
+            border: 1px solid #AF9553;
+            height: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form_request > textarea {
+            border: 1px solid #AF9553;
+            height: 6rem;
+            margin-bottom: 1rem;
+        }
+
+        .form_request > input[type='button'] {
+            content: 'Отправить'
+        }
+
+        .form_request > .control {
+            background: transparent;
+            color: #1F1B1C;
+        }
+
+        .form_request > .control:hover {
+            background-color: #AF9553;
         }
