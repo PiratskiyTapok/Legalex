@@ -33,13 +33,16 @@ namespace Legalex
             else
             {
                 app.UseHsts();
-                app.UseStatusCodePagesWithRedirects("Error/{0}.html");
             }
 
-            app.UseFileServer();
+            app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseHttpsRedirection();
             app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapDefaultControllerRoute();
+            });
         }
     }
 }
