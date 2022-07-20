@@ -950,6 +950,10 @@
         .with-arrow.control:hover::after {
             right: -4px;
         }
+
+        .with-arrow.control:hover {
+            background-color: #AF9553;;
+        }
         
         .with-arrow.control::after {
             content: "";
