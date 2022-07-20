@@ -947,12 +947,21 @@
             text-decoration: none;
         }
         
+        .control:active,
+        .control:focus {
+            outline: none;
+        }
+        
+        .control::-moz-focus-inner {
+            border: 0;
+        }
+        
+        .control.control-bordered:hover {
+            background-color: #AF9553;
+        }
+        
         .with-arrow.control:hover::after {
             right: -4px;
-        }
-
-        .with-arrow.control:hover {
-            background-color: #AF9553;;
         }
         
         .with-arrow.control::after {
@@ -968,8 +977,8 @@
             transition: all 0.2s linear;
         }
         
-        .control.control-filled {
-            background-color: #AF9553;
+        .control.control-bordered {
+            background-color: #201C1D;
         }
         
         .hero__content-image {
@@ -1757,6 +1766,11 @@
             width: 656px;
             height: 424px;
             border: 28px solid #2F2A2E;
+        }
+        
+        .content__map .map iframe {
+            width: 100%;
+            height: 100%;
         }
         /*Documents****************************************/
         
