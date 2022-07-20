@@ -272,7 +272,7 @@
                     </p>
                 </div>
                 <div class="controls">
-                    <a href="#" class="control">Оставить заявку</a>
+                    <a href="#request-popup" class="control popup-link">Оставить заявку</a>
                 </div>
             </div>
         </div>
@@ -428,6 +428,30 @@
                 <div class="popup__title">Title</div>
                 <div class="popup__text">
                     Some text
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="request-popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="" class="popup__close close-popup">X</a>
+                <div class="popup__title">Оставить заявку</div>
+                <div class="popup__from">
+                    <form class="form_request">
+                        <label for="nameofsender">Имя</label>
+                        <input type="text" id="nameofsender" name="nameofsender">
+                        <label for="phonenumber">Номер телефона</label>
+                        <input type="tel" id="phonenumber" name="phonenumber">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" name="email">
+                        <label for="title">Заголовок</label>
+                        <input type="text" id="title" name="title">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message"></textarea>
+                        <button type="submit" class="control">Отправить</button>
+                    </form>
                 </div>
             </div>
         </div>
