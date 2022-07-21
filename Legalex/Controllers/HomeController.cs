@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Legalex.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace Legalex.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private ApplicationContext _context;
+
+        public HomeController(ApplicationContext context)
         {
-            return View();
+            _context = context;
+        }
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Orders.ToListAsync());
         }
     }
 }

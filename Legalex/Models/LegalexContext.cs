@@ -2,12 +2,12 @@
 
 namespace Legalex.Models
 {
-    public class LegalexContext : DbContext
+    public class ApplicationContext : DbContext
     {
         public DbSet<Order> Orders { get; set; }
         public DbSet<ServiceRequest> ServiceRequests { get; set; }
 
-        public LegalexContext(DbContextOptions<LegalexContext> options)
+        public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
             Database.EnsureCreated();
